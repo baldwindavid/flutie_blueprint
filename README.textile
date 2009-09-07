@@ -2,13 +2,19 @@ h1. Flutie + Compass Blueprint Grid
 
 This is a slightly modified version of Thoughtbot's Flutie CSS framework plugin.  The Flutie plugin seems to have inexplicably disappeared.
 
-This version moves the public/flutie stylesheets within the public/stylesheet directory.  It also adds "Compass's":http://github.com/chriseppstein/compass Blueprint ie and print stylesheets to public/stylesheets/blueprint.  Additionally, only the grid portion of Compass's Blueprint is added to public/stylesheets/sass as `_blueprint_grid_plugin`.  This file can then be imported into your main application sass file.
+This version moves the public/flutie stylesheets within the public/stylesheet directory.  It also adds "Compass's":http://github.com/chriseppstein/compass Blueprint ie and print stylesheets to public/stylesheets/blueprint.  Additionally, only the grid portion of Compass's Blueprint is added to public/stylesheets/sass as `_blueprint_grid_plugin`.  This file can then be imported into your main application sass file.  Your layout would then look something like the following...
 
-  = stylesheet_link_tag :flutie
-  = stylesheet_link_tag :my_stylesheet
-  = stylesheet_link_tag "blueprint/print.css"
-  /[if IE]
-    = stylesheet_link_tag "blueprint/ie.css"
+bc.. = stylesheet_link_tag :flutie
+= stylesheet_link_tag :my_stylesheet
+= stylesheet_link_tag "blueprint/print.css", :media => :print
+/[if IE]
+  = stylesheet_link_tag "blueprint/ie.css"
+  
+h2. Installation
+
+bc. script/plugin install git@github.com:baldwindavid/flutie_blueprint.git
+  
+<hr>  
   
 h2. Why?
 

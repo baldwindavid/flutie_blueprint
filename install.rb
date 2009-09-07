@@ -13,13 +13,13 @@ end
 directory = File.dirname(__FILE__)
 
 # Copy the flutie stylesheets into rails_root/public/flutie
-copy_files("/public/stylesheets/flutie", "/public/stylesheets/flutie", directory)
+copy_files("/public/stylesheets/flutie", "/public/stylesheets", directory)
 
 # Copy the blueprint ie/print stylesheets into rails_root/public/stylesheets
-copy_files("/public/stylesheets/blueprint", "/public/stylesheets/blueprint", directory)
+copy_files("/public/stylesheets/blueprint", "/public/stylesheets", directory)
 
 # Copy blueprint_grid.sass into rails_root/public/stylesheets/sass
-copy_files("/public/stylesheets/sass", "/public/stylesheets/sass", directory)
+copy_files("/public/stylesheets/sass", "/public/stylesheets", directory)
 
 # Copy the stylesheet expansion into rails_root/config/initializers
 copy_files("/config/flutie_expansion.rb", "/config/initializers", directory)
